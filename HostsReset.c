@@ -63,10 +63,9 @@ BOOL reset() {
         "#       38.25.63.10     x.acme.com              # x client host\n"
         "\n"
         "# localhost name resolution is handled within DNS itself.\n"
-        "#    127.0.0.1       localhost\n"
-        "#    ::1             localhost\n";
+        "#\t127.0.0.1       localhost\n"
+        "#\t::1             localhost\n";
 
-    
     int result = MessageBox(NULL, "Are you sure you want to reset the hosts file to the default state?", "You sure?", MB_YESNO | MB_ICONQUESTION);
     if (result != IDYES) {
         return FALSE;
@@ -100,4 +99,3 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     return 0;
 }
-
